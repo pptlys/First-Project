@@ -1,2 +1,2 @@
 # First-Project
-Create a website
+Create a web page
