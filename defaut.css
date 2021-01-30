@@ -1,5 +1,24 @@
+* {
+    height: 100vh;
+    width: 100vw;
+}
+
 body {
-    min-height: 100vh;
-    margin: 0;
-    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    background-image: linear-gradient(60deg, #5ee7df 0%, #b490ca 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    position: relative;
+    transform: scale(0.8,0.8);
+    border-radius: 2% 3% 4%;
+    border-bottom: 3px outset ;
+    border-right: 2px outset ;
+    border-left: 1px outset ;
+    border-top: 1px outset ;
+    background-color: rgba(255,255,255,.15);
+    backdrop-filter: blur(5px);
 }
