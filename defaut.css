@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: linear-gradient(145deg, #a8edea 0%,  #fed6e3 100%);
+    background-image: linear-gradient(145deg, hsl(177, 66%, 79%) 0%,  hsl(341, 95%, 92%) 100%);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,11 +15,11 @@ body {
     position: relative;
     transform: scale(0.8,0.8);
     border-radius: 2% 3% 4%;
-    border-bottom: 3px solid rgba(217, 217, 217,1);
-    border-right: 3px solid rgba(217, 217, 217,1);
-    border-left: 1px solid rgba(255, 255, 255,1);
-    border-top: 1px solid  rgba(255, 255, 255,1);
-    background-color: rgba(255,255,255,.15);
+    border-bottom: 3px solid hsla(0, 0%, 85%,1);
+    border-right: 3px solid hsla(0, 0%, 85%,1);
+    border-left: 1px solid hsla(0, 0%, 100%,1);
+    border-top: 1px solid  hsla(0, 0%, 100%,1);
+    background-color: hsla(0, 0%, 100%, 0.15);
     backdrop-filter: blur(5px);
 }
 
@@ -32,10 +32,19 @@ body {
     border: none;
     background: inherit;
     border-radius: 30%;
-    box-shadow:  20px 20px 60px  rgba(217, 217, 217,1),
-                 -20px -20px 60px  rgba(255, 255, 255,1),
-                 inset 20px 20px 40px  rgba(217, 217, 217,1),
-                 inset -20px -20px 40px  rgba(255, 255, 255,1);
+    box-shadow:  20px 20px 60px  hsla(0, 0%, 85%,1),
+                 -20px -20px 60px  hsla(0, 0%, 100%,1),
+                 inset 20px 20px 40px  hsla(0, 0%, 85%,1),
+                 inset -20px -20px 40px  hsla(0, 0%, 100%,1);
     outline: none;
 }
 
+#haiku {
+    font-family: "Brush Script MT", cursive;
+    font-style: normal;
+    text-align: center;
+    font-size: 4vw;
+    color: hsla(0, 0%, 100%, .7);
+    text-shadow: 1px 1px 3px hsla(0, 0%, 0%, .7);
+
+}
