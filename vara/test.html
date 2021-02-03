@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Vara</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="vara.js"></script>
+        <style>
+            *{
+                margin: 0;
+                padding:0;
+
+            }
+
+            body{
+                background-color: blue;
+                background-size: cover;
+                background-position: center;
+                height: 100vh;
+                overflow: hidden;
+                color: white;
+            }
+
+            #container{
+                width: 80%;
+                margin: 20px auto;
+                min-height: 700px;
+                margin-top: 150px;
+            
+            }
+        </style>
+    
+    </head>
+    <body>
+        <div id="vara-container"></div>
+        <script>
+            var vara = new Vara("#vara-container", "Parisienne.json", 
+                [{
+                text: "Hello World",
+                y: 150,
+                fromCurrentPosition: {y:false},
+                delay: 3000,
+                duration:3000
+                }],
+                
+                [{
+                text: "What is going on?",
+                y: 150,
+                fromCurrentPosition: {y:false},
+                delay: 3000,
+                duration:3000
+                }],
+                
+                   
+                {
+                    strokeWidth: 2,
+                    color: "fff",
+                    fontSize: 36,
+                    textAlign: "center"
+                });
+
+        vara.ready(function(){
+            var erase = true;
+            vara.animationEnd(function(i,o){
+                if (i == "no_erase") erase = false;
+                if (erase){
+                    o.container.style.transition =
+                    "opacity ls ls";
+                    o.container.style.opacity = 0;
+                    }
+            })
+        });
+
+
+                
+
+        </script>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script src="" async defer></script>
+    </body>
+</html>
