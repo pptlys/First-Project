@@ -52,10 +52,11 @@ body {
     text-shadow: 1px 1px 3px hsla(0, 0%, 0%, .7);
 }
 
-#vara-container {
+#haiku-container {
     height: 50vh;
     width: 80vw;
     transform: translateY(20vw);
+    background-color: green;
 }
 }
 
@@ -114,10 +115,11 @@ body {
     text-shadow: 1px 1px 3px hsla(0, 0%, 0%, .7);
 }
 
-#vara-container {
+#haiku-container {
     height: 60vh;
     width: 80vw;
     transform: translateY(20vh);
+    background-color: green;
 
 }
 

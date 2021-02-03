@@ -19,6 +19,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="defaut.css" media="all">
         <script src=jquery/jquery-3.5.1.js></script>
+        <script src="/haiku.js" type="text/javascript"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -28,12 +29,12 @@
 
                 <audio id="click1" src="/audio/click1.mp3" preload="auto"></audio>
 
-                <button class="button" onclick="document.getElementById('click1').play();" autofocus>
+                <button class="button"  autofocus onclick=
+                                               "document.getElementById('click1').play();writeHaiku();">
                     <span id="haiku">Haiku</span>
                 </button>   
                 
-                <div id="vara-container"></div>
-
+                <div id="haiku-container"></div>
         </div>
         <script src="" async defer></script>
     </body>
