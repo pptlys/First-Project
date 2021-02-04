@@ -28,13 +28,13 @@
                 color: white;
             }
 
-            #container{
-                width: 80%;
-                margin: 20px auto;
-                min-height: 700px;
-                margin-top: 150px;
+            /* #container{ */
+                /* width: 80%; */
+                /* margin: 20px auto; */
+                /* min-height: 700px; */
+                /* margin-top: 150px; */
             
-            }
+            /* } */
         </style>
     
     </head>
@@ -44,39 +44,48 @@
             var vara = new Vara("#vara-container", "Parisienne.json", 
                 [{
                 text: "Hello World",
-                y: 150,
+                // y: 150,
                 fromCurrentPosition: {y:false},
-                delay: 3000,
-                duration:3000
+                delay: 1000,
+                duration:3000,
+                // strokeWidth: 2,
+                    // color: "fff",
+                    // fontSize: 36,
+                    // textAlign: "center"
                 }],
                 
-                [{
-                text: "What is going on?",
-                y: 150,
-                fromCurrentPosition: {y:false},
-                delay: 3000,
-                duration:3000
-                }],
-                
-                   
                 {
+                    
                     strokeWidth: 2,
-                    color: "fff",
+                    color: "red",
                     fontSize: 36,
                     textAlign: "center"
-                });
+                // text: "What is going on?",
+                // y: 150,
+                // fromCurrentPosition: {y:false},
+                // delay: 3000,
+                // duration:3000
+                },
+                
+                   
+                // {
+                    // strokeWidth: 2,
+                    // color: "fff",
+                    // fontSize: 36,
+                    // textAlign: "center"}
+                );
 
-        vara.ready(function(){
-            var erase = true;
-            vara.animationEnd(function(i,o){
-                if (i == "no_erase") erase = false;
-                if (erase){
-                    o.container.style.transition =
-                    "opacity ls ls";
-                    o.container.style.opacity = 0;
-                    }
-            })
-        });
+        // vara.ready(function(){
+            // var erase = true;
+            // vara.animationEnd(function(i,o){
+                // if (i == "no_erase") erase = false;
+                // if (erase){
+                    // o.container.style.transition =
+                    // "opacity ls ls";
+                    // o.container.style.opacity = 0;
+                    // }
+            // })
+        // });
 
 
                 
