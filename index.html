@@ -50,25 +50,17 @@
                             fontSize: 48,
                             textAlign: "center",
                             letterSpacing:1,
-                            // autoAnimation : false
+                            autoAnimation : false
                         });
 
                         vara.ready(function(){
-                            var drawbutton = document.querySelector("button1");
-                            var drawn = false;
+                            var drawbutton = document.querySelector("#button1");
+                            drawbutton.disabled=false;
                             drawbutton.addEventListener("click",function(){
-                                if (drawn = false){
-                                    vara.playAll(); 
-                                    drawn=true;
-                                }
-                                else {
-                                    vara.animationEnd(function(i,o) {
-                                    o.container.style.transition = "opacity 1s 1s";
-                                    o.container.style.opacity = 0;});
-                                    drawn = false;
-                                }});
+                                    vara.playAll(),drawbutton.disabled=true 
+                            });
                         });
-                    
+
                  </script> 
         
     </body>
