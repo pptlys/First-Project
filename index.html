@@ -37,8 +37,6 @@
             
                    
                 <script>
-                    document.getElementById("button1").addEventListener("click",writehaiku);
-                    function writehaiku() {
                         var vara= new Vara("#haiku-container", "/vara/Parisienne.json",
                         [{ 
                             text:"A fallen leaf, flew back to its branch! No, it was a butterfly.", 
@@ -48,14 +46,28 @@
                         }],
                         {
                             strokeWidth:1,
-                            color:"#4a4af3a6" ,
+                            color:"#00000066" ,
                             fontSize: 48,
-                            textAlign: "center"
-                        }
+                            textAlign: "center",
+                            letterSpacing:1,
+                            // autoAnimation : false
+                        });
 
-                    
-                         ) 
-                    } 
+                        vara.ready(function(){
+                            var drawbutton = document.querySelector("button1");
+                            var drawn = false;
+                            drawbutton.addEventListener("click",function(){
+                                if (drawn = false){
+                                    vara.playAll(); 
+                                    drawn=true;
+                                }
+                                else {
+                                    vara.animationEnd(function(i,o) {
+                                    o.container.style.transition = "opacity 1s 1s";
+                                    o.container.style.opacity = 0;});
+                                    drawn = false;
+                                }});
+                        });
                     
                  </script> 
         

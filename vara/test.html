@@ -23,12 +23,9 @@
                 background-color: blue;
                 background-size: cover;
                 background-position: center;
-                height: 100vh;
-                overflow: hidden;
-                color: white;
             }
 
-            /* #container{ */
+            /* #vara-container{ */
                 /* width: 80%; */
                 /* margin: 20px auto; */
                 /* min-height: 700px; */
@@ -39,43 +36,37 @@
     
     </head>
     <body>
-        <div id="vara-container"></div>
+        <button id="drawbutton" onclick="write">Draw</button>
+        <button id="erase" onclick="clean">Erase</button>
+        <div id= "vara-container"></div>
         <script>
-            var vara = new Vara("#vara-container", "Parisienne.json", 
-                [{
-                text: "Hello World",
-                // y: 150,
-                fromCurrentPosition: {y:false},
-                delay: 1000,
-                duration:3000,
-                // strokeWidth: 2,
-                    // color: "fff",
-                    // fontSize: 36,
-                    // textAlign: "center"
-                }],
-                
-                {
-                    
-                    strokeWidth: 2,
-                    color: "red",
-                    fontSize: 36,
-                    textAlign: "center"
-                // text: "What is going on?",
-                // y: 150,
-                // fromCurrentPosition: {y:false},
-                // delay: 3000,
-                // duration:3000
-                },
-                
-                   
-                // {
-                    // strokeWidth: 2,
-                    // color: "fff",
-                    // fontSize: 36,
-                    // textAlign: "center"}
-                );
+            write = function(){
+                var vara = new Vara("#vara-container", "/Parisienne.json",
+                                    [{
+                                        text:"Hallo World",
+                                        // y:100,
+                                        fromCurrentPosition: {y:false},
+                                        delay: 1000,
+                                        duration:3000,
+                                    }],{
+                                        strokeWidth:1,
+                                        fontSize:46,
+                                        color:"red",
+                                        textAlign:"center"
+                                    });}
+           
+        clean = function(){
+        container = document.getElementById("vara-container");
+        container.innerHTML = "";
+        }
+                                    
+                                        
 
-        // vara.ready(function(){
+
+
+
+            
+            
             // var erase = true;
             // vara.animationEnd(function(i,o){
                 // if (i == "no_erase") erase = false;
@@ -84,7 +75,7 @@
                     // "opacity ls ls";
                     // o.container.style.opacity = 0;
                     // }
-            // })
+                // })
         // });
 
 

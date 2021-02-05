@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>vara</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="/vara/vara.js"></script>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background-color: blue;
+            }
+        </style>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <button id= "draw">draw</button>
+        <button id= "erase">erase</button>
+       <div id="vara-container"></div>
+       <Script>
+        
+        //    var drawn = false;
+        //    if (drawn =  false){ 
+           var vara = new Vara(
+               "#vara-container",
+               "/vara/Parisienne.json",
+               [{text:"Hallo World",
+               fromcurrentPosition:{y:false},
+               delay:1000,
+               duration:3000
+            }],{
+                fontSize:36,
+                textAlign:"center",
+                strockWidth:1,
+                color:"red",
+                autoAnimation:false
+            }
+            );
+            vara.ready(function(){
+                var draw = document.getElementById("draw");
+                draw.addEventListener("click",function(){vara.playAll();
+            })});
+            // drawn = true;
+        // }
+        // else {
+            // document.getElementById("erase").addEventListener("click",function(
+            // ){
+            // document.getElementById("vara-comtainer").innerHTML="";
+            // });
+            // drawn=false;
+        // }
+    
+            
+
+
+
+
+             
+       </Script>
+        <script src="" async defer></script>
+    </body>
+</html>
